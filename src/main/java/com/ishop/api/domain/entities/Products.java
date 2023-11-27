@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
@@ -16,10 +17,10 @@ public class Products {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_product;
+    private Long id;
 
     @Column(nullable= false, length = 45)
-    private String name_product;
+    private String name;
 
     @Column(nullable = false, length = 255)
     private String description;
@@ -28,13 +29,13 @@ public class Products {
     private Integer sku;
 
     @Column
-    private String creation_date;
+    private Date creation_date;
 
     @Column(nullable=false)
     private Double unitary_value;
 
     @Column(nullable=false)
-    private Integer stock;
+    private BigDecimal stock;
 
     @Column(nullable=false)
     private Boolean active;
