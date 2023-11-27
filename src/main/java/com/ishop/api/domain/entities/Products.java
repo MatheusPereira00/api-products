@@ -1,9 +1,11 @@
-package com.ishop.api.domain;
+package com.ishop.api.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Date;
 
 @Data
 @Entity
@@ -35,6 +37,6 @@ public class Products {
     private Integer stock;
 
     @Column(nullable=false)
-    private Integer active;
+    private Boolean active;
 
 }
